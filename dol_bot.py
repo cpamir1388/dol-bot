@@ -4,7 +4,8 @@ import sqlite3
 import random
 from datetime import datetime, timedelta
 
-API_TOKEN = "TOKEN_INJAST"
+import os
+API_TOKEN = os.environ.get("API_TOKEN")
 
 bot = Bot(API_TOKEN)
 dp = Dispatcher(bot)
